@@ -35,8 +35,8 @@
             android:id="@+id/incorrect_guesses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@{@string/incorrect_guess(gameViewModel.incorrectGuesses)}"/>
+            android:text="@{@string/incorrect_guess(gameViewModel.incorrectGuesses)}"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/guess"
@@ -53,5 +53,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Guess!" />
+
+        <Button
+            android:id="@+id/finish_game_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="@{() -> gameViewModel.finishGame()}"
+            android:text="Finish Game" />
     </LinearLayout>
 </layout>
